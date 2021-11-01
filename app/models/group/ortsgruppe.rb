@@ -11,10 +11,11 @@ class Group::Ortsgruppe < ::Group
 
   self.default_children = [
     Group::OrtsgruppeVorstand,
-    Group::OrtsgruppeAg,
     Group::OrtsgruppeKontakte,
     Group::OrtsgruppeLeiterrunde
   ]
+
+  self.possible_children = [Group::OrtsgruppeAg]
 
   children(*default_children)
 
