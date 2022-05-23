@@ -19,24 +19,25 @@ describe Export::Tabular::Groups::List do
   subject { csv }
 
    its(:headers) do
-     expected = [
-       "Id",
-       "Elterngruppe",
-       "Name",
-       "Kurzname",
-       "Gruppentyp",
-       "Haupt-E-Mail",
-       "Adresse",
-       "PLZ",
-       "Ort",
-       "Land",
-       "Ebene",
-       "Beschreibung",
-       "normale Mitglieder",
-       "vergünstigte Mitglieder"
-     ]
+     expected = ['Id',
+                 'Elterngruppe',
+                 'Name',
+                 'Kurzname',
+                 'Gruppentyp',
+                 'Haupt-E-Mail',
+                 'Adresse',
+                 'PLZ',
+                 'Ort',
+                 'Land',
+                 'Geändert',
+                 'Ebene',
+                 'Beschreibung',
+                 'normale Mitglieder',
+                 'vergünstigte Mitglieder',
+                 'Telefonnummern',
+                 'Anzahl Mitglieder',
+                 'Social Media']
 
-     should match_array expected
      should eq expected
    end
 
