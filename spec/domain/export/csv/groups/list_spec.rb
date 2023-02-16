@@ -18,7 +18,7 @@ describe Export::Tabular::Groups::List do
 
   subject { csv }
 
-   its(:headers) do
+   it 'has the correct headers' do
      expected = ['Id',
                  'Elterngruppe',
                  'Name',
@@ -32,13 +32,15 @@ describe Export::Tabular::Groups::List do
                  'Geändert',
                  'Ebene',
                  'Beschreibung',
+                 'Link zu Nextcloud',
                  'normale Mitglieder',
                  'vergünstigte Mitglieder',
                  'Telefonnummern',
                  'Anzahl Mitglieder',
                  'Social Media']
 
-     should eq expected
+     expect(subject.headers).to match_array expected
+     expect(subject.headers).to eq expected
    end
 
    it 'has 4 items' do
