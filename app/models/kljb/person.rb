@@ -10,6 +10,7 @@ module Kljb::Person
 
   included do
     Person::PUBLIC_ATTRS -= [:nickname]
+    used_attributes.delete(:nickname)
   end
 
   def underage?(cutoff_date = Time.zone.now.to_date)
