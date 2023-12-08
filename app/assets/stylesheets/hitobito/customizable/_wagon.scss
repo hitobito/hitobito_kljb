@@ -11,12 +11,12 @@
 
 #page-header {
   & > a {
-    color: $headerLinkColor;
+    color: $header-link-color;
   }
 
   .is-logged-out & {
     a {
-      color: $headerLinkColor;
+      color: $header-link-color;
     }
   }
 }
@@ -24,6 +24,6 @@
 
 .nav-left {
   a.is-active, li.is-active > a {
-    background-color: $navLeftActiveBackground
+    background-color: $nav-left-active-background
   }
 }
