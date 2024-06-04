@@ -9,7 +9,7 @@ module Kljb::Person
   extend ActiveSupport::Concern
 
   included do
-    Person::PUBLIC_ATTRS -= [:nickname]
+    Person::PUBLIC_ATTRS.delete(:nickname)
     used_attributes.delete(:nickname)
   end
 
