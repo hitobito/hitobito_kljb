@@ -5,7 +5,6 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_kljb.
 
-
 module Kljb::Group
   extend ActiveSupport::Concern
 
@@ -16,5 +15,4 @@ module Kljb::Group
 
     root_types Group::Dioezesanverband
   end
-
 end

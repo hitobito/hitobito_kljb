@@ -5,7 +5,6 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_kljb.
 
-
 class Group::OrtsgruppeKontakte < ::Group
   class Kontakt < ::Role
     self.visible_from_above = false

@@ -13,10 +13,10 @@ module Groups
       def cutoff_date
         now = Date.current
         year = if now >= Date.new(now.year, *AGE_CUTOFF_DATE)
-                 now.year
-               else
-                 now.year - 1
-               end
+          now.year
+        else
+          now.year - 1
+        end
 
         Date.new(year, *AGE_CUTOFF_DATE)
       end
@@ -47,10 +47,10 @@ module Groups
 
     def all_members_of_layer
       Person.joins(:roles)
-            .where(roles: {
-                     group: @group.groups_in_same_layer,
-                     type: ['Group::Ortsgruppe::Mitglied']
-                   })
+        .where(roles: {
+          group: @group.groups_in_same_layer,
+          type: ["Group::Ortsgruppe::Mitglied"]
+        })
     end
 
     def members_with_siblings
@@ -64,9 +64,11 @@ module Groups
     def underage_people_with_two_siblings(keys)
       complete_families(keys)
         .group_by(&:family_key)
-        .map { |_key, family| family.drop(2).select { |person| 
+        .map { |_key, family|
+        family.drop(2).select { |person|
           person.underage?(Groups::MemberPaymentStatus.cutoff_date)
-        } }
+        }
+      }
         .flatten.compact
     end
 

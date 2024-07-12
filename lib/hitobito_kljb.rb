@@ -5,10 +5,9 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_kljb.
 
-
-require 'wagons'
+require "wagons"
 # require 'your_wagon_dependencies'
-require 'hitobito_kljb/wagon'
+require "hitobito_kljb/wagon"
 
 module HitobitoKljb
 end

@@ -10,9 +10,8 @@ module Kljb::Event
 
   included do
     self.role_types = [Event::Role::Leader,
-                       Event::Role::Teamer,
-                       Event::Role::Helper,
-                       Event::Role::Participant]
+      Event::Role::Teamer,
+      Event::Role::Helper,
+      Event::Role::Participant]
   end
-
 end

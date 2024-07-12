@@ -6,9 +6,7 @@
 #  https://github.com/hitobito/hitobito_kljb.
 
 class Event::Role::Teamer < Event::Role
-
   self.permissions = [:participations_full]
 
   self.kind = :teamer
-
 end

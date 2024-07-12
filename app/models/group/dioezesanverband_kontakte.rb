@@ -5,7 +5,6 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_kljb.
 
-
 class Group::DioezesanverbandKontakte < ::Group
   class Kontakt < ::Role
     self.kind = :external
