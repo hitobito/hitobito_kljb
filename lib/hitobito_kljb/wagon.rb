@@ -20,6 +20,8 @@ module HitobitoKljb
     ]
 
     config.to_prepare do
+      JobManager.wagon_jobs += [MemberPaymentStatusJob]
+
       # extend application classes here
       Group.include Kljb::Group
       Person.include Kljb::Person
