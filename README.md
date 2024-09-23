@@ -3,6 +3,8 @@
 This hitobito wagon defines the organization hierarchy with groups and roles
 of Kljb.
 
+:warn: For now, this repo has been archived. It can be reactivated if needed.
+
 ## Organization Hierarchy
 
 * Diözesanverband
